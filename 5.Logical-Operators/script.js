@@ -20,13 +20,9 @@ if (pr === "ali" || pr === "Ali") {
 
 let age = 40
 
-if (age > 30 || age < 50) {
+if (age > 30 && age < 50) {
 	console.log("done")
 }
-
-// if ((age <= 50 || age >= 60) && !(age < 50 || age > 60)) {
-// 	console.log("done")
-// }
 
 //!
 
@@ -89,3 +85,22 @@ personalMovieDB.movies ga javoblarni quyidagi formatda yozing:
     }
 
 Konsolda hamma narsa xatosiz ishlashini tekshiring */
+
+let numberOfFilms = 10 //+prompt("Nechta kino ko'rgansiz")
+
+let personalMovieDB = {
+	count: numberOfFilms,
+	movies: {
+		// spiderman: "9.8",
+	},
+	actors: {},
+	genres: [],
+	private: false,
+}
+
+let a = "spiderman" //prompt("Oxirgi ko'rgan film")spiderman
+let b = "9.8" //prompt("Unga baho")
+
+personalMovieDB.movies[a] = b
+
+console.log(personalMovieDB.movies)
