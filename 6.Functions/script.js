@@ -25,9 +25,9 @@
 
 // sayHi()
 
-let sayHi = function () {
-	console.log("Hello")
-}
+// let sayHi = function () {
+// 	console.log('Hello')
+// }
 
 // let say = sayHi
 
@@ -41,11 +41,11 @@ let sayHi = function () {
 
 //Arrow Function
 
-let sayHello = () => {
-	console.log("Hello")
-}
+// let sayHello = () => {
+// 	console.log('Hello')
+// }
 
-sayHello()
+// sayHello()
 
 // return
 
@@ -63,23 +63,23 @@ sayHello()
 // console.log(card)
 
 //Local Scope
-let num = 6
+// let num = 6
 
-function showMessage() {
-	num = 125
-	console.log(num)
-}
+// function showMessage() {
+// 	num = 125
+// 	console.log(num)
+// }
 
-showMessage()
-console.log(num)
+// showMessage()
+// console.log(num)
 
-//Arguments
+// //Arguments
 
-function getInfo(name = "Alex", surname = "Smith", age = 15) {
-	console.log(name, surname, age)
-}
+// function getInfo(name, surname, age = 15) {
+// 	console.log(name, surname, age)
+// }
 
-getInfo("Akbar", "Vayisov")
+// getInfo('Akbar', 'Vayisov', 30)
 
 //Homework
 // 1. Ism, Familiya, Age (prompt)
@@ -88,22 +88,22 @@ getInfo("Akbar", "Vayisov")
 
 // setInfo(name, surname, age)
 
-// {
-// 	name:
-// 	surname:
-// 	age:
-// }
+function setInfo(name, surname, age) {
+	return {
+		name: name,
+		surname: surname,
+		age: age,
+	}
+}
 
-// let infos = {
-// 	student1: {
-// 		name:
-// 	},
-// 	student2: {
+let studentInfos = {}
 
-// 	},
-// 	student3: {
+for (let i = 0; i < 2; i++) {
+	let firstName = prompt('Sizning ismingiz nima: ?', 'Diyorbek')
+	let lastName = prompt('Sizning familiyangiz nima: ? ', 'Karomov')
+	let age = prompt('Sizning yoshingiz nechchida: ?', '16')
 
-// 	}
-// }
+	studentInfos[firstName] = setInfo(firstName, lastName, age)
+}
 
-// infos["student" + i] = setInfo()
+console.log(studentInfos)
