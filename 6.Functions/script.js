@@ -88,22 +88,22 @@
 
 // setInfo(name, surname, age)
 
-function setInfo(name, surname, age) {
-	return {
-		name: name,
-		surname: surname,
-		age: age,
-	}
-}
+// function setInfo(name, surname, age) {
+// 	return {
+// 		name: name,
+// 		surname: surname,
+// 		age: age,
+// 	}
+// }
 
-let studentInfos = {}
+// let studentInfos = {}
 
-for (let i = 0; i < 2; i++) {
-	let firstName = prompt('Sizning ismingiz nima: ?', 'Diyorbek')
-	let lastName = prompt('Sizning familiyangiz nima: ? ', 'Karomov')
-	let age = prompt('Sizning yoshingiz nechchida: ?', '16')
+// for (let i = 0; i < 2; i++) {
+// 	let firstName = prompt('Sizning ismingiz nima: ?', 'Diyorbek')
+// 	let lastName = prompt('Sizning familiyangiz nima: ? ', 'Karomov')
+// 	let age = prompt('Sizning yoshingiz nechchida: ?', '16')
 
-	studentInfos[firstName] = setInfo(firstName, lastName, age)
-}
+// 	studentInfos[firstName] = setInfo(firstName, lastName, age)
+// }
 
-console.log(studentInfos)
+// console.log(studentInfos)
