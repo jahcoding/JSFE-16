@@ -70,16 +70,62 @@ Math.sqrt(16) // 4
 // 1 - function pow(x, n)
 //pow(2, 3) 8
 
+function pow(x, n) {
+	return x ** 1 / n
+}
+
+function pow2(x, n) {
+	let total = 1
+	for (let i = 0; i < n; i++) {
+		total = total * x
+		// total *= x
+	}
+	return total
+}
+
+console.log(pow2(2, 3))
+
+function pow3(x, n) {
+	if (n === 1) {
+		return x
+	} else {
+		return x * pow3(x, n - 1)
+	}
+}
+console.log(pow3(2, 3))
+
 //2 - function floor(n)
 //floor(2.7324234) 2
 
+function floor(n) {
+	return n % 1 >= 0.5 ? n.toFixed(0) - 1 : n.toFixed(0)
+}
+
+console.log(floor(2.6))
+
 //3 - function ceil(n)
 //ceil(2.7)  3
+
+function ceil(n) {
+	return n % 1 >= 0.5 ? n.toFixed(0) : +n.toFixed(0) + 1
+}
+
+console.log(ceil(2.2))
 
 //4 - function round(n)
 //round(2.7)  3
 //round(2.7)  2
 
+function round(n) {
+	return n.toFixed(0)
+}
+
+console.log(round(2.6))
+
 //5 - function sqrt(x, n)
 //sqrt(16, 2)  4
 //sqrt(8, 3)  2
+
+function sqrt(x, n) {
+	return x ** (1 / n)
+}
