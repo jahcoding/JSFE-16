@@ -94,16 +94,91 @@ console.log('a' > 'A')
 
 console.log('A'.localeCompare('a'))
 
+// 'str'.indexOf('search')
+
+//indexOf
+
+// function customIndexOf(str, searchStr, start = 0) {
+// 	start = start === 0 ? start : start + 1
+
+// 	let status = false
+
+// 	for (; start < str.length - 1; start++) {
+// 		// "W"						'Web'
+// 		if (str[start] === searchStr) {
+// 			return start
+// 		}
+// 		for (let j = 0; j < searchStr.length; j++) {
+// 			// "W"                  "W"
+// 			if (str[start] === searchStr[j]) {
+// 				start++
+// 				status = true
+// 			} else {
+// 				status = false
+// 			}
+// 		}
+// 		if (status) {
+// 			return start - searchStr.length
+// 		}
+// 	}
+// 	return -1
+// }
+// // O(n^2)
+
+// console.log(customIndexOf(example, 'W', 2))
+
+//startsWith
+
+// function customStartsWith(str, searchStr) {
+// 	let status = false
+
+// 	if (str[0] === searchStr) return true
+
+// 	for (let i = 0; i < str.length; i++) {
+// 		// 'Open Web'   'Opeb'
+// 		if (str[i] === searchStr[i] && i < searchStr.length) {
+// 			status = true
+// 		} else if (i < searchStr.length) {
+// 			status = false
+// 		}
+// 	}
+
+// 	return status
+// }
+
+// console.log(customStartsWith(example, 'Open'))
+
+// function customEndsWith(str, searchStr) {
+// 	let status = false
+// 	let some = str.length - searchStr.length
+
+// 	if (str[str.length - 1] === searchStr) return true
+
+// 	for (let i = str.length - 1; i >= 0; i--) {
+// 		if (str[i] === searchStr[i - some] && i >= some) {
+// 			status = true
+// 		} else if (i >= some) {
+// 			status = false
+// 		}
+// 	}
+
+// 	return status
+// }
+
+// console.log(customEndsWith(example, 'Web'))
 
 //indexof, includes, startsWith, endsWith, slice, substring, substr
 
-function indexOf(str, searchString, pos = 0)
+let example = 'Open Web' // 8
 
+//slice
 
-let example = "Open Web"
-indexOf(example, 'e') // 2
+function slice(str, start, end = str.length) {
+	let result = ''
+	for (; start < end; start++) {
+		result += str[start]
+	}
+	return result
+}
 
-
-
-
-// 'str'.indexOf('search')
+console.log(slice(example, 1, 3)) //pen
