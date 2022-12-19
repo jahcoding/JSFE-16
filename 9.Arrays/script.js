@@ -136,16 +136,23 @@ for(let i = 0; i < arr2.length; i++){
 arr = ['apple', 'samsung', 'xiaomi', 'huawei']
 
 function push(array, item){
-	//code
+	return array[array.length] = item
 }
 
-push(arr, 'poco')// ['apple', 'samsung', 'xiaomi', 'huawei', 'poco']
+push(arr, 'poco')
+push(arr, 'vivo')
+
+console.log(arr)// ['apple', 'samsung', 'xiaomi', 'huawei', 'poco']
 
 //pop
 arr = ['apple', 'samsung', 'xiaomi', 'huawei']
 
-function pop(array, item){
-	//code
+function pop(array){
+	array.length = array.length - 1
+	return array
 }
+pop(arr)
+pop(arr)
 
-pop(arr)// ['apple', 'samsung', 'xiaomi']
+
+console.log(arr)// ['apple', 'samsung', 'xiaomi']
